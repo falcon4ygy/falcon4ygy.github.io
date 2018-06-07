@@ -17,17 +17,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   
 <!-- Sidebar -->
  <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-red" style="display:none; z-index:5" id="mySidebar">
-   <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">Liu Zhe // 六哲 <i class="fa fa-caret-down"></i>
+   <button class="w3-button w3-block w3-left-align" onclick="lzAccFunc()">Liu Zhe // 六哲 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="liuzheAccMenu" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">Bijing Shen Aiguo // 毕竟深爱过</a>
     <a href="#" class="w3-bar-item w3-button">Lei Le Zou Le San Le // 累了走了散了</a>
     <a href="#" class="w3-bar-item w3-button">Rang Quan Shijie Zhidao Wo Ai Ni // 让全世界知道我爱你</a>
     <a href="#" class="w3-bar-item w3-button">Wo Zaihu De Shi Ni // 我在乎的是你</a>
   </div>
-    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">Ada Zhuang // 庄心妍 <i class="fa fa-caret-down"></i>
+    <button class="w3-button w3-block w3-left-align" onclick="azAccFunc()">Ada Zhuang // 庄心妍 <i class="fa fa-caret-down"></i>
   </button>
-  <div id="demoAcc" class="w3-hide w3-white w3-card">
+  <div id="adazhuangAccMenu" class="w3-hide w3-white w3-card">
     <a href="#" class="w3-bar-item w3-button">Zouzhe Zouzhe Jiu San Le // 走着走着就散了</a>
     <a href="#" class="w3-bar-item w3-button">Bu Xiang Guan Tai Duo // 不想管太多</a>
   </div>
@@ -116,8 +116,20 @@ function myFunction() {
     }
 }
   
-function myAccFunc() {
-    var x = document.getElementById("demoAcc");
+function lzAccFunc() {
+    var x = document.getElementById("liuzheAccMenu");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-grey";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-grey", "");
+    }
+}
+  
+function azAccFunc() {
+    var x = document.getElementById("adazhuangAccMenu");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
         x.previousElementSibling.className += " w3-grey";
