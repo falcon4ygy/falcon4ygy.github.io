@@ -3,7 +3,6 @@
 	padding-bottom: 90.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
-	max-height: 315px;
 }
 .videoWrapper iframe {
 	position: absolute;
