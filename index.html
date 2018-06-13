@@ -16,35 +16,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 <body>
   
-<!-- Sidebar -->
- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-red" style="display:none; z-index:5" id="mySidebar">
-   <button class="w3-button w3-block w3-left-align" onclick="lzAccFunc()">Liu Zhe // 六哲 <i class="fa fa-caret-down"></i>
-  </button>
-  <div id="liuzheAccMenu" class="w3-hide w3-white w3-card">
-    <a href="#" class="w3-bar-item w3-button">Bijing Shen Aiguo // 毕竟深爱过</a>
-    <a href="#" class="w3-bar-item w3-button">Lei Le Zou Le San Le // 累了走了散了</a>
-    <a href="#" class="w3-bar-item w3-button">Rang Quan Shijie Zhidao Wo Ai Ni // 让全世界知道我爱你</a>
-    <a href="#" class="w3-bar-item w3-button">Wo Zaihu De Shi Ni // 我在乎的是你</a>
-  </div>
-    <button class="w3-button w3-block w3-left-align" onclick="azAccFunc()">Ada Zhuang // 庄心妍 <i class="fa fa-caret-down"></i>
-  </button>
-  <div id="adazhuangAccMenu" class="w3-hide w3-white w3-card">
-    <a href="#" class="w3-bar-item w3-button">Zouzhe Zouzhe Jiu San Le // 走着走着就散了</a>
-    <a href="#" class="w3-bar-item w3-button">Bu Xiang Guan Tai Duo // 不想管太多</a>
-  </div>
-  <!--<a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>-->
-</div>
-
-<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-  
 <div id = "main">
   
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-    <button id="openNav" class="w3-bar-item w3-button w3-red w3-xlarge" onclick="w3_open()">&#9776;</button>
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <!--button id="openNav" class="w3-bar-item w3-button w3-red w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a-->
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">home</a>
     <a href="https://www.youtube.com/channel/UCiXCpKjmoTqOh1fJUzoXVlA" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">youtube</a>
     <a href="/contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">contact</a>
@@ -62,9 +40,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:64px 16px">
   <h1 class="w3-margin w3-jumbo">English translations of Chinese songs</h1>
-  <h1 class="w3-xlarge">中文歌的英文译文</h1>
+  <h1 class="w3-xxlarge">中文歌的英文译文</h1>
 </header>
 
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
+  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-jumbo">popular</a>
+</div>
+  
 <!-- Bijing Shen Aiguo -->
 <div class="w3-light-grey w3-row-padding w3-padding-64 w3-container style="padding: 32px 0px"">
   <div class="w3-half w3-center" >
@@ -113,24 +95,26 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
   
-<!-- Bu Xiang Guan Tai Duo > 
-<div class="w3-row-padding w3-padding-64 w3-container style="padding: 32px 0px"">
-  <div class="w3-half w3-center w3-content">
-    <div class="videoWrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/isKvSxoJgAc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-    </div>
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
+  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-jumbo">new</a>
+</div>
+  
+<!-- Bijing Shen Aiguo -->
+<div class="w3-light-grey w3-row-padding w3-padding-64 w3-container style="padding: 32px 0px"">
+  <div class="w3-half w3-center" >
+    <iframe class="w3-hide-medium w3-hide-small" width="560" height="315" src="https://www.youtube.com/embed/isKvSxoJgAc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
     <div id="buxiangguantaiduolyrics" class="w3-modal">
       <div class="w3-modal-content">
         <div class="w3-container">
           <span onclick="document.getElementById('buxiangguantaiduolyrics').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-           <p>hi. this is lyric. baiiiii.</p>
+           <p>hi</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="w3-half">
-    <div class="w3-content" style="padding:32px 0px 0px 0px">
-      <h1>不想管太多 // Bu Xiang Guan Tai Duo</h1> 
+  <div class="w3-half w3-center">
+    <div class="w3-content">
+      <h1>不想管太多 // Bijing Shen Aiguo</h1> 
       <h2>庄心妍 // Ada Zhuang </h2>
       <h3> album name here (year released)</h3>
       <p onclick="document.getElementById('buxiangguantaiduolyrics').style.display='block'" 
@@ -138,44 +122,34 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
   </div>
 </div>
-  
-<!-- Leile Zoule Sanle >
-<div class="w3-light-grey w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-half w3-center w3-content">
-      <div class="videoWrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-pQZzvc_GXM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-  <div class="w3-half" style="padding:32px 48px 0px 16px">
+
+<!-- Leile Zoule Sanle -->
+<div class="w3-row-padding w3-padding-64 w3-container style="padding: 32px 0px"">
+  <div class="w3-half w3-center">
     <div class="w3-content">
-      <h1>累了走了散了 // Lei Le Zou Le San Le</h1> 
-      <h3>六哲 // Liu Zhe 
-      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h1>不想管太多 // Leile Zoule Sanle</h1> 
+      <h2>庄心妍 // Ada Zhuang </h2>
+      <h3> album name here (year released)</h3>
+      <p onclick="document.getElementById('buxiangguantaiduolyrics').style.display='block'" 
+       class="w3-button w3-xxlarge w3-black w3-hover-red w3-margin-right">see full lyrics</p>
     </div>
   </div>
-</div>  
-  
-<!-- Leile Zoule Sanle >
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-half" style="padding:32px 48px 0px 16px">
-    <div class="w3-content">
-      <h1>累了走了散了 // Lei Le Zou Le San Le</h1> 
-      <h3>六哲 // Liu Zhe 
-      <h5>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </div>
-    <div class="w3-half w3-center">
-      <div class="videoWrapper">
-        <iframe width="560" height="315" max-height="100" src="https://www.youtube.com/embed/-pQZzvc_GXM" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="w3-half w3-center" >
+    <iframe class="w3-hide-medium w3-hide-small" width="560" height="315" src="https://www.youtube.com/embed/isKvSxoJgAc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+    <div id="buxiangguantaiduolyrics" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span onclick="document.getElementById('buxiangguantaiduolyrics').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+           <p>hi</p>
+        </div>
       </div>
     </div>
-</div-->  
+  </div>
+</div>
+
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
   <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-jumbo">see all</a>
-  <!--h1 class="w3-margin w3-jumbo">see all</h1-->
 </div>
 </div>
 
@@ -189,8 +163,8 @@ function myFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-  
-function lzAccFunc() {
+ 
+/*function lzAccFunc() {
     var x = document.getElementById("liuzheAccMenu");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
@@ -224,7 +198,7 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
   //document.getElementById("openNav").style.display = "inline-block";
-}
+}*/
 </script>
 
 </body>
