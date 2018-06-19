@@ -24,7 +24,7 @@ th {
 }
 
 th, td {
-    text-align: left;
+
     padding: 16px;
 }
 
@@ -63,6 +63,9 @@ tr:nth-child(odd) {
 <div style="padding: 64px 0px">
   <div class="w3-container w3-row-padding">
     <table id="songTable">
+      <col width="2*">
+      <col width="2*">
+      <col width="1*">
       <tr class="w3-deep-purple">
         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
         <th onclick="sortTable(0)"><h2 style="color: #ffffff">Title</h2></th>
