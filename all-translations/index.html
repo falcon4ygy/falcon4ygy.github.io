@@ -31,9 +31,30 @@ tr:nth-child(even) {
     background-color: #f2f2f2
 }
 </style>
+    
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-purple w3-card w3-left-align w3-large">
+    <!--button id="openNav" class="w3-bar-item w3-button w3-red w3-xlarge" onclick="w3_open()">&#9776;</button>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a-->
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-light-green">home</a>
+    <a href="https://www.youtube.com/channel/UCiXCpKjmoTqOh1fJUzoXVlA" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">youtube</a>
+    <a href="/contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">contact</a>
+    <a href="/all-translations" class="w3-bar-item w3-button w3-padding-large w3-hover-white">all translations</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="https://www.youtube.com/channel/UCiXCpKjmoTqOh1fJUzoXVlA" class="w3-bar-item w3-button w3-padding-large">youtube</a>
+    <a href="/contact" class="w3-bar-item w3-button w3-padding-large">contact</a>
+    <a href="/all-translations" class="w3-bar-item w3-button w3-padding-large">all translations</a>
+  </div>
+</div>
+
 <body>
-  
-<table id="myTable">
+    
+<!-- table -->
+<table id="songTable">
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
     <th onclick="sortTable(0)">Name</th>
@@ -89,7 +110,7 @@ function myFunction() {
 
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("myTable");
+  table = document.getElementById("songTable");
   switching = true;
   //Set the sorting direction to ascending:
   dir = "asc"; 
