@@ -13,30 +13,44 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
+  
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+  
 <body>
   
 <div id = "main">
   
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
-    <!--button id="openNav" class="w3-bar-item w3-button w3-red w3-xlarge" onclick="w3_open()">&#9776;</button>
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a-->
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">home</a>
-    <a href="https://www.youtube.com/channel/UCiXCpKjmoTqOh1fJUzoXVlA" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">youtube</a>
-    <a href="/contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">contact</a>
-    <a href="/all-translations" class="w3-bar-item w3-button w3-padding-large w3-hover-white">all translations</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-indigo w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="https://www.youtube.com/channel/UCiXCpKjmoTqOh1fJUzoXVlA" class="w3-bar-item w3-button w3-padding-large">youtube</a>
-    <a href="/contact" class="w3-bar-item w3-button w3-padding-large">contact</a>
-    <a href="/all-translations" class="w3-bar-item w3-button w3-padding-large">all translations</a>
-  </div>
-</div>
+<div w3-include-html="/sidebar.html"></div> 
   
-<!-- Song Specific Information Below >
+<!-- Song Specific Information Below -->
 <div class="w3-light-blue w3-row-padding w3-container w3-hide-medium w3-hide-small" style="padding: 64px 0px 16px 0px">
   <div class="w3-half w3-center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Ka2s7x20EYs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -48,7 +62,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h3> April 2018</h3>
     </div>
   </div>
-</div-->
+</div>
 
 <div class="w3-light-blue w3-row-padding w3-padding-64 w3-container w3-hide-large">
   <div class="w3-center">
@@ -224,20 +238,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
   
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
-  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-jumbo">more translations</a>
+  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-large">more translations</a>
 </div>
 </div>
+  
 <script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
- 
+includeHTML(); 
 </script>
 </body>
 </html>
