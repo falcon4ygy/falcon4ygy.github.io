@@ -23,17 +23,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
-    <button id="openNav" class="w3-bar-item w3-button w3-red w3-xlarge" onclick="w3_open()">&#9776;</button>
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-light-green">home</a>
     <a href="https://www.youtube.com/user/falcon4ygy?sub_confirmation=1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-green">youtube</a>
   </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="https://www.youtube.com/channel/UCiXCpKjmoTqOh1fJUzoXVlA" class="w3-bar-item w3-button w3-padding-large">youtube</a>
-  </div>
-</div>
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:64px 16px">
@@ -42,7 +34,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 
 <div class="w3-container w3-light-blue w3-center w3-padding-16">
-  <h1 class="w3-lime w3-xxlarge">popular</h1>
+  <h1 class="w3-xlarge">popular</h1>
 </div>
   
 <!-- Bijing Shen Aiguo -->
@@ -113,52 +105,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!--TODO: Add Footer w/youtube and twitter links-->
 
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
- 
-/*function lzAccFunc() {
-    var x = document.getElementById("liuzheAccMenu");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-grey";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-        x.previousElementSibling.className = 
-        x.previousElementSibling.className.replace(" w3-grey", "");
-    }
-}
-  
-function azAccFunc() {
-    var x = document.getElementById("adazhuangAccMenu");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-        x.previousElementSibling.className += " w3-grey";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-        x.previousElementSibling.className = 
-        x.previousElementSibling.className.replace(" w3-grey", "");
-    }
-}
-  
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-  //document.getElementById("openNav").style.display = 'none';
-}
-function w3_close() {
-  //document.getElementById("main").style.marginLeft = "0%";
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-  //document.getElementById("openNav").style.display = "inline-block";
-}*/
 </script>
 
 </body>
