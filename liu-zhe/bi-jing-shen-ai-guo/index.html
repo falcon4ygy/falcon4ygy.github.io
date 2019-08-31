@@ -7,7 +7,6 @@
 <meta name="description" content="English, pinyin, and simplified Chinese lyrics for the song 毕竟深爱过 
                                   (Bi Jing Shen Ai Guo) by singer 六哲 (Liu Zhe).">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="/fluidvideo.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,8 +28,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="/all-translations" class="w3-bar-item w3-button w3-padding-large w3-hover-white">all translations</a>
   </div>
 </div>
-  
-
   
 <!-- Song Specific Information Below -->
 <div class="w3-light-blue w3-row-padding w3-container w3-hide-medium w3-hide-small" style="padding: 64px 0px 16px 0px">
@@ -230,21 +227,32 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
-  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-jumbo">more translations</a>
+  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-large">more translations</a>
 </div>
 </div>
 
 <script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
 }
- 
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+} 
 </script>
 
 </body>
