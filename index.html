@@ -14,6 +14,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
+  
 <script>
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
@@ -51,11 +52,11 @@ function includeHTML() {
 <div id = "main">
   
 <!-- Navbar -->
-<div class="w3-top">
+<!--div class="w3-top">
   <div class="w3-bar w3-green w3-card w3-left-align w3-large">
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-light-green">home</a>
     <a href="https://www.youtube.com/user/falcon4ygy?sub_confirmation=1" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-light-green">youtube</a>
-  </div>
+  </div-->
 
 <!-- Header -->
 <header class="w3-container w3-blue w3-center" style="padding:64px 16px">
@@ -93,10 +94,10 @@ function includeHTML() {
       <h3>October 2016</h3>
       <a href="/liu-zhe/lei-le-zou-le-san-le" class="w3-button w3-xxlarge w3-black w3-hover-red w3-margin-right">see full lyrics</a>
     </div>
-  <!--/div>
+  <!--/div-->
   <div class="w3-half w3-center" >
     <iframe class="w3-hide-medium w3-hide-small" width="560" height="315" src="https://youtube.com/embed/-pQZzvc_GXM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-  </div-->
+  </div>
 </div>
   
 <div class="w3-container w3-lime w3-center w3-padding-16">
@@ -127,15 +128,37 @@ function includeHTML() {
       <h3> 2018</h3>
       <a href="/hebe-tien/miserable-warmth" class="w3-button w3-xxlarge w3-black w3-hover-red w3-margin-right">see full lyrics</a>
     </div>
-  <!--/div>
+  <!--/div-->
   <div class="w3-half w3-center" >
     <iframe class="w3-hide-medium w3-hide-small" width="560" height="315" src="https://youtube.com/embed/Ka2s7x20EYs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
-  </div-->
+  </div>
 </div>
 
 <!--TODO: Add Footer w/youtube and twitter links-->
 <script>
 includeHTML();
+  
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
 </script>
 
 </body>
