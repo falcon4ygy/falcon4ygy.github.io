@@ -15,19 +15,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
+<script src="https://falcon4ygy.github.io/includehtml.js"></script>
 </head>
   
 <body>  
 <div id = "main">
   
-<!-- Navbar-->
-<div class="w3-top">
-  <div class="w3-bar w3-indigo w3-card w3-left-align w3-large">
-    <a href="/" class="w3-bar-item w3-button w3-padding-large">home</a>
-    <a href="https://www.youtube.com/channel/UCiXCpKjmoTqOh1fJUzoXVlA" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">youtube</a>
-    <a href="/all-translations" class="w3-bar-item w3-button w3-padding-large w3-hover-white">all translations</a>
-  </div>
-</div>
+<div w3-include-html="/navigation.html"></div>
   
 <!-- Song Specific Information Below -->
 <div class="w3-light-blue w3-row-padding w3-container w3-hide-medium w3-hide-small" style="padding: 64px 0px 16px 0px">
@@ -231,29 +225,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 </div>
 
-<script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
-function myAccFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-green";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-green", "");
-  }
-} 
-</script>
+<script src="https://falcon4ygy.github.io/navscript.js"></script>
 
 </body>
 </html>
