@@ -14,41 +14,30 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
   
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-}
-</script>
-  
 <body>
-  <div w3-include-html="/sidebar.html"></div> 
 <div id = "main">
   
-
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-animate-right" style="display:none;z-index:5;width:25%;right:0" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+<a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('hebe')">
+  Hebe Tien <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="hebe" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">最暖的忧伤</a>
+    <a href="#" class="w3-bar-item w3-button">墨绿的夜</a>
+  </div>
+  <button class="w3-button w3-block w3-left-align" onclick="myAccFunc('liuzhe')">
+  Liu Zhe <i class="fa fa-caret-down"></i>
+  </button>
+  <div id="liuzhe" class="w3-hide w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button">毕竟深爱过 // Bijing Shen Aiguo</a>
+    <a href="#" class="w3-bar-item w3-button">累了走了散了</a>
+  </div>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>  
   
 <!-- Song Specific Information Below -->
 <div class="w3-light-blue w3-row-padding w3-container w3-hide-medium w3-hide-small" style="padding: 64px 0px 16px 0px">
@@ -238,12 +227,32 @@ function includeHTML() {
 </div>
   
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
-  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-large">more translations</a>
+  <a href="/all-translations" class="w3-button w3-black w3-padding-large w3-xxlarge">more translations</a>
 </div>
 </div>
   
 <script>
-includeHTML(); 
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
 </script>
 </body>
 </html>
