@@ -140,18 +140,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <div class="w3-third w3-center" style="padding:0px 0px 0px 0px">
     <p>相逢前的局促</p>
     <p>离散前的欢呼</p>
-    <p>也曾刻骨如今若有似无</p>
+    <p>也曾刻骨如今<b class="w3-text-blue w3-hover-gray" onclick="lyricAcc('ruo-you-ruo-wu')">若有似无</b></p>
   </div>
   <div class="w3-third w3-center" style="padding:0px 0px 0px 0px">
     <p>Xiāngféng qián de júcù</p>
     <p>Lísàn qián de huānhū</p>
-    <p>Yě céng kègǔ rújīn ruòyǒu-sìwú</p>
+    <p>Yě céng kègǔ rújīn <b class="w3-text-blue w3-hover-gray" onclick="lyricAcc('ruo-you-ruo-wu')">ruòyǒu-sìwú</b></p>
   </div>
   <div class="w3-third w3-center">
     <p>The awkwardness before meeting</p>
     <p>The cheering before parting</p>
-    <p>And what was once bone-deep is now barely noticeable</p>
+    <p>And what was once bone-deep is now <b class="w3-text-blue w3-hover-gray" onclick="lyricAcc('ruo-you-ruo-wu')">barely noticeable</b></p>
   </div>  
+</div>
+  
+<div class="w3-hide w3-grey w3-container w3-center" id="ruo-you-ruo-wu">
+  <p>若有似无 (ruòyǒu-sìwú), more commonly seen as 若有若无 (ruòyǒu-ruòwú), translates literally to "as if there is, as if there isn't".
+    It can be used to describe something that is barely noticeable, such as a weak smile, a light drizzle, or a dim light. In this 
+    lyric it describes how the intensity of emotion in a relationship fades over time, even though it cannot be forgotten.</p>
 </div>
   
 <div class="w3-light-grey w3-row-padding w3-container" style="padding:0px 64px 0px 64px"> 
@@ -283,6 +289,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <div w3-include-html="/footer.html"></div>
 <script src="/navscript.js"></script>
+<script src="/lyricbuttons.js"></script>
   
 </body>
 </html>
