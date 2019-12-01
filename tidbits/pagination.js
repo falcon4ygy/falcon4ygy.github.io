@@ -1,3 +1,5 @@
+includeHTML();
+
 var currentPage = 1;
 var numberPerPage = document.getElementsByName("tidbit").length;
 var tidbits = [                     //this array contains all the tidbits; TODO store objects instead of strings for complex sorting
