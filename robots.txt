@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /all-translations/
+Disallow: /tidbits/
+Sitemap: https://falcon4ygy.github.io/sitemap.xml
