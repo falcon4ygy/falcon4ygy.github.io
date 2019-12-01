@@ -9,9 +9,7 @@ var tidbits = [                     //this array contains all the tidbits; TODO 
 var numberOfPages = Math.ceil(tidbits.length / numberPerPage);    //calculate number of pages
 
 function displayPage(number) {
-  if ((number < 1) || (number > numberOfPages)) {
-    return;
-  }
+  if ((number < 1) || (number > numberOfPages)) { //do nothing }
   else {
     //update button states
       buttonUpdate(number);
@@ -20,6 +18,7 @@ function displayPage(number) {
     var i;
     for (i = 0; i < numberPerPage; i++) {
       document.getElementsByName("tidbit")[i].setAttribute("w3-include-html", tidbits[startIndex + i]); 
+    }
   }
 }
 
