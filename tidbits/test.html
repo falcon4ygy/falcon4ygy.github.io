@@ -61,6 +61,7 @@ function displayPage(number) {
     //update button states
       buttonUpdate(number);
     //includehtml of the ones that correspond to that page
+    currentPage = number;
     var startIndex = (currentPage - 1) * numberPerPage;
     var i;
     for (i = 0; i < numberPerPage; i++) {
