@@ -65,6 +65,7 @@ function displayPage(number) {
     for (i = 0; i < numberPerPage; i++) {
       var page = "/tidbits/"
       document.getElementsByName("tidbit")[i].setAttribute("w3-include-html", page + tidbits[startIndex + i]); 
+    }
   }
 }
 
