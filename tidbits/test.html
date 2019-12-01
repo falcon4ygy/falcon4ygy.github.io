@@ -63,7 +63,8 @@ function displayPage(number) {
     var startIndex = (currentPage - 1) * numberPerPage;
     var i;
     for (i = 0; i < numberPerPage; i++) {
-      document.getElementsByName("tidbit")[i].setAttribute("w3-include-html", tidbits[startIndex + i]); 
+      var page = "/tidbits/"
+      document.getElementsByName("tidbit")[i].setAttribute("w3-include-html", page + tidbits[startIndex + i]); 
   }
 }
 
