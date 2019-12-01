@@ -29,10 +29,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 
 <div id="pagination-bar" class="w3-bar w3-center w3-light-grey">
-  <a href="#" class="w3-button w3-blue" onclick="buttonUpdate(1)">1</a>
-  <a class="w3-button" onclick="buttonUpdate(2)">2</a>
-  <a class="w3-button" onclick="buttonUpdate(3)">3</a>
-  <a class="w3-button" onclick="buttonUpdate(4)">4</a>
+  <a name="pbutton" class="w3-button w3-blue" onclick="buttonUpdate(1)">1</a>
+  <a name="pbutton" class="w3-button" onclick="buttonUpdate(2)">2</a>
+  <a name="pbutton" class="w3-button" onclick="buttonUpdate(3)">3</a>
+  <a name="pbutton" class="w3-button" onclick="buttonUpdate(4)">4</a>
 </div>
   
 <!-- Tidbits -->
@@ -49,7 +49,7 @@ function buttonUpdate(number) {
   //hide active
   document.getElementsByClassName("w3-button w3-blue")[0].setAttribute("class", "w3-button"); 
   //blue current
-  document.getElementsByClassName("w3-button")[number-1].setAttribute("class", "w3-button w3-blue"); 
+  document.getElementsByName("w3-button")[number-1].setAttribute("class", "w3-button w3-blue"); 
 }
 </script>
 </body>
