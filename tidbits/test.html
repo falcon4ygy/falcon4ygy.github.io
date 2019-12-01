@@ -29,28 +29,50 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 
 <div id="pagination-bar" class="w3-bar w3-center w3-light-grey">
-  <a name="pbutton" class="w3-button w3-blue" onclick="buttonUpdate(1)">1</a>
-  <a name="pbutton" class="w3-button" onclick="buttonUpdate(2)">2</a>
-  <a name="pbutton" class="w3-button" onclick="buttonUpdate(3)">3</a>
-  <a name="pbutton" class="w3-button" onclick="buttonUpdate(4)">4</a>
+  <a name="pbutton" class="w3-button w3-blue" onclick="displayPage(1)">1</a>
+  <a name="pbutton" class="w3-button" onclick="displayPage(2)">2</a>
 </div>
   
 <!-- Tidbits -->
 <div name="tidbit"></div>
 <div name="tidbit"></div>
-<div name="tidbit"></div>
-<div name="tidbit"></div>
+
 
 
 <div w3-include-html="/footer.html"></div>
 <script src="/navscript.js"></script>
 <script>
+var currentPage = 1;
+var numberPerPage = document.getElementsByName("tidbit").length;
+var tidbits = [                     //this array contains all the tidbits; TODO store objects instead of strings for complex sorting
+  "bi-jing-shen-ai-guo.html",
+  "lei-le-zou-le-san-le.html",
+  "zui-nuan-de-you-shang.html",
+  "na-shi-ni-li-kai-le-bei-jing-de-sheng-huo.html"
+];
+var numberOfPages = Math.ceil(tidbits.length / numberPerPage);    //calculate number of pages
+
+function displayPage(number) {
+  if ((number < 1) || (number > numberOfPages)) {
+    return;
+  }
+  else {
+    //update button states
+      buttonUpdate(number);
+    //includehtml of the ones that correspond to that page
+    var startIndex = (currentPage - 1) * numberPerPage;
+    var i;
+    for (i = 0; i < numberPerPage; i++) {
+      document.getElementsByName("tidbit")[i].setAttribute("w3-include-html", tidbits[startIndex + i]); 
+  }
+}
+
 function buttonUpdate(number) {
   //hide active
   document.getElementsByClassName("w3-button w3-blue")[0].setAttribute("class", "w3-button"); 
   //blue current
   document.getElementsByName("pbutton")[number-1].setAttribute("class", "w3-button w3-blue"); 
-}
+}  
 </script>
 </body>
 </html>
