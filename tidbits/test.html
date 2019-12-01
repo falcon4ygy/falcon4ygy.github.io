@@ -42,6 +42,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div w3-include-html="/footer.html"></div>
 <script src="/navscript.js"></script>
 <script>
+includeHTML();
+  
 var currentPage = 1;
 var numberPerPage = document.getElementsByName("tidbit").length;
 var tidbits = [                     //this array contains all the tidbits; TODO store objects instead of strings for complex sorting
