@@ -13,10 +13,13 @@ function displayPage(number) {
     return;
   }
   else {
+    //update button states
+      //find active one and remove color attribute
+      //find current one using getElementsByID()[number-1] and add class name
     //includehtml of the ones that correspond to that page
     var startIndex = (currentPage - 1) * numberPerPage;
     var i;
     for (i = 0; i < numberPerPage; i++) {
-      <div w3-include-html="/footer.html"></div>
+      //includehtml of (startIndex + i)
   }
 }
