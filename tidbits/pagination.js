@@ -2,9 +2,13 @@ var currentPage = 1;
 var numberPerPage = document.getElementsByName("tidbit").length;
 var tidbits = [                     //this array contains all the tidbits; TODO store objects instead of strings for complex sorting
   "bi-jing-shen-ai-guo.html",
+  "xiao-chou.html",
   "lei-le-zou-le-san-le.html",
   "zui-nuan-de-you-shang.html",
-  "na-shi-ni-li-kai-le-bei-jing-de-sheng-huo.html"
+  "xin-an-li-de.html",
+  "zou-zhe-zou-zhe-jiu-san-le.html",
+  "na-shi-ni-li-kai-le-bei-jing-de-sheng-huo.html",
+  "qi-feng-le.html"
 ];
 var numberOfPages = Math.ceil(tidbits.length / numberPerPage);    //calculate number of pages
 
