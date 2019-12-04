@@ -13,30 +13,32 @@ var tidbits = [                     //this array contains all the tidbits; TODO 
 var numberOfPages = Math.ceil(tidbits.length / numberPerPage);    //calculate number of pages
 
 function displayPage(number) {
-  if (number == "minus") { //previous
-    if (currentPage > 1) {
-      currentPage--;
-      buttonUpdate(currentPage);
-      pageUpdate();
-    }
-  }
-  else if (number == "plus") { //more
-    if (currentPage < numberOfPages) {
-      currentPage++;
-      buttonUpdate(currentPage);
-      pageUpdate();
-    }
-  }
-  else if ((number < 1) || (number > numberOfPages)) { /* do nothing */  }
+  if ((number < 1) || (number > numberOfPages)) { /* do nothing */  }
   else if (number == currentPage) { /* also do nothing */ }
   else {
     //update button states
-      buttonUpdate(number);
+    buttonUpdate(number);
     //includehtml of the ones that correspond to that page
     currentPage = number;
     pageUpdate();
   }
   includeHTML();
+}
+
+function previous() {
+  if (currentPage > 1) {
+    currentPage--;
+    buttonUpdate(currentPage);
+    pageUpdate();
+  }
+}
+
+function next() {
+  if (currentPage < numberOfPages) {
+    currentPage++;
+    buttonUpdate(currentPage);
+    pageUpdate();
+  }
 }
 
 function pageUpdate() {
