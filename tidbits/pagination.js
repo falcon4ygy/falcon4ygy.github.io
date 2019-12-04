@@ -25,6 +25,7 @@ function displayPage(number) {
       currentPage++;
       buttonUpdate(currentPage);
       pageUpdate();
+    }
   }
   else if ((number < 1) || (number > numberOfPages)) { /* do nothing */  }
   else if (number == currentPage) { /* also do nothing */ }
