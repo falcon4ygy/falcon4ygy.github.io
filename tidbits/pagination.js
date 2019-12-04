@@ -31,6 +31,8 @@ function previous() {
     buttonUpdate(currentPage);
     pageUpdate();
   }
+  else { /* do nothing */ }
+  includeHTML();
 }
 
 function next() {
@@ -39,6 +41,8 @@ function next() {
     buttonUpdate(currentPage);
     pageUpdate();
   }
+  else { /* do nothing */ }
+  includeHTML();
 }
 
 function pageUpdate() {
