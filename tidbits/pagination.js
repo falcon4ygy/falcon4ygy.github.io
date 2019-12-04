@@ -13,21 +13,38 @@ var tidbits = [                     //this array contains all the tidbits; TODO 
 var numberOfPages = Math.ceil(tidbits.length / numberPerPage);    //calculate number of pages
 
 function displayPage(number) {
-  if ((number < 1) || (number > numberOfPages)) { /* do nothing */  }
+  if (number == "<") { //previous
+    if (currentPage > 1) {
+      currentPage--;
+      buttonUpdate(currentPage);
+      pageUpdate();
+    }
+  }
+  else if (number == ">") { //more
+    if (currentPage < numberOfPages) {
+      currentPage++;
+      buttonUpdate(currentPage);
+      pageUpdate();
+  }
+  else if ((number < 1) || (number > numberOfPages)) { /* do nothing */  }
   else if (number == currentPage) { /* also do nothing */ }
   else {
     //update button states
       buttonUpdate(number);
     //includehtml of the ones that correspond to that page
     currentPage = number;
-    var startIndex = (currentPage - 1) * numberPerPage;
+    pageUpdate();
+  }
+  includeHTML();
+}
+
+function pageUpdate() {
+  var startIndex = (currentPage - 1) * numberPerPage;
     var i;
     for (i = 0; i < numberPerPage; i++) {
       var page = "/tidbits/"
       document.getElementsByName("tidbit")[i].setAttribute("w3-include-html", page + tidbits[startIndex + i]); 
     }
-  }
-  includeHTML();
 }
 
 function buttonUpdate(number) {
