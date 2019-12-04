@@ -13,14 +13,14 @@ var tidbits = [                     //this array contains all the tidbits; TODO 
 var numberOfPages = Math.ceil(tidbits.length / numberPerPage);    //calculate number of pages
 
 function displayPage(number) {
-  if (number == "<") { //previous
+  if (number == "minus") { //previous
     if (currentPage > 1) {
       currentPage--;
       buttonUpdate(currentPage);
       pageUpdate();
     }
   }
-  else if (number == ">") { //more
+  else if (number == "plus") { //more
     if (currentPage < numberOfPages) {
       currentPage++;
       buttonUpdate(currentPage);
