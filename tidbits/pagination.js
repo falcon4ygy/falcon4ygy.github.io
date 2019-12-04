@@ -51,5 +51,5 @@ function buttonUpdate(number) {
   //hide active
   document.getElementsByClassName("w3-button w3-gray")[0].setAttribute("class", "w3-button"); 
   //blue current
-  document.getElementsByName("pbutton")[number-1].setAttribute("class", "w3-button w3-gray"); 
+  document.getElementsByName("pbutton")[number].setAttribute("class", "w3-button w3-gray"); 
 }  
