@@ -4,11 +4,15 @@ var tidbits = [                     //this array contains all the tidbits; TODO 
   "bi-jing-shen-ai-guo.html",
   "xiao-chou.html",
   "lei-le-zou-le-san-le.html",
+  "nong-xu-zuo-jia.html",
+  "qi-feng-le.html",
+  "zui-mei-de-hui-yi.html",
+  "shen-shi.html",
+  "ru-guo-mei-you-ta-ni-hai-ai-wo-ma.html",
   "zui-nuan-de-you-shang.html",
   "xin-an-li-de.html",
   "zou-zhe-zou-zhe-jiu-san-le.html",
-  "na-shi-ni-li-kai-le-bei-jing-de-sheng-huo.html",
-  "qi-feng-le.html"
+  "na-shi-ni-li-kai-le-bei-jing-de-sheng-huo.html"
 ];
 var numberOfPages = Math.ceil(tidbits.length / numberPerPage);    //calculate number of pages
 
